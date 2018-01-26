@@ -1,0 +1,31 @@
+<div id='adminHeader'>{{{headerText}}}</div>
+<div id='headerNav'>
+	{{#if userText}}<span id='welcomeUser'>{{userText}} | </span>{{/if}} {{#if showHelpMenu}}
+	<div class='helpDropdown dropdown'>
+		<a id='dLabel' data-target='.mainmenu' href='javascript:void(0)' data-toggle='dropdown' role='button' aria-haspopup='true'
+		 aria-expanded='false'> 
+			{{textKeys.global.helpLabel}}<span class='caret'></span>
+		</a>
+		<ul class='dropdown-menu dropdown-menu-right mainmenu' role='menu' aria-labelledby='dLabel'>
+			{{#if showKnowledgeCenter}}
+			<li>
+				<a href='https://www.ibm.com/support/knowledgecenter/SSP4XS_2.1.0/com.ibm.icip.doc/welcome/icip_2.1_welcome.html' target='novaKCHelp'
+				 data-automation='header_lnk_kc'>
+					{{textKeys.global.knowledgeCenterHelp}} <i class='fa fa-external-link'></i>
+				</a>
+			</li>
+			{{/if}}
+			<li>
+				<a href='javascript:void(0)' id='releaseNotesLink' class='releaseNotesLink' data-automation='header_lnk_releaseNotesLink'>{{releaseNotesLink}}</a>
+			</li>
+			{{#if helpMenuItems}}
+			<li role='separator' class='divider'></li>
+			<li class='dropdown-header'>{{textKeys.guidedHelp.menuHeading}}</li>
+			{{#each helpMenuItems}}
+			<li class='childMenuItem'><a href='javascript:void(0)' id='{{id}}' data-automation='header_lnk_{{id}}' class='guidedHelpMenuItem' data-event='/Nova.TopBar/{{id}}'>{{label}}</a></li>
+			{{/each}} {{/if}}
+		</ul>
+	</div>
+	{{/if}}
+	<a href='javascript:void(0)' id='logoutLink' data-automation='header_lnk_logout' data-event='/Nova.TopBar/logout'>{{textKeys.global.logoutLabel}}</a>
+</div>

@@ -1,0 +1,142 @@
+//_GLOBAL--------------------------------------------------------------------*/
+html {
+	font-size: 16px !important;
+}
+
+* html .gainlayout {
+	height: 1%;
+}
+
+html,
+body {
+	height: 100%;
+	/* needed for container min-height  */
+	margin: 0 !important;
+	padding: 0 !important;
+	-webkit-font-smoothing: antialiased;
+}
+
+// keep input boxes from falling off the edge
+@media only screen and (max-width: 1122px) {
+	#interiorPage {
+		input.gw-form-text,
+		textarea {
+			width: 45%;
+		}
+		input.kbaAnswer {
+			width: 80% !important;
+		}
+		#profileScreen #profileContent #profile #profileTabs {
+			width: 75%;
+		}
+	}
+}
+
+body {
+	@extend .base-fonts;
+	font-size: 100%;
+	min-width: $min-site-width;
+	background: $novaBackground;
+}
+
+html>body {
+	font-size: 0.95em;
+}
+
+iframe {
+	border: none;
+}
+
+.spacer {
+	clear: both;
+	height: 1px;
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+q {
+	&:before {
+		content: '\201c';
+	}
+	&:after {
+		content: '\201d';
+	}
+	q {
+		&:before {
+			content: '\2018';
+		}
+		&:after {
+			content: '\2019';
+		}
+	}
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: $link-color;
+}
+
+a {
+	color: $link-color;
+}
+
+.showMe {
+	@extend .visible;
+}
+
+.hideMe {
+	@extend .hidden;
+}
+
+.heightAuto {
+	height: auto;
+}
+
+.noScroll {
+	overflow: hidden !important;
+}
+
+.scrollable {
+	overflow-x: hidden !important;
+	overflow-y: scroll !important;
+}
+
+a,
+input,
+button,
+.btn {
+	&:focus,
+	&:active,
+	&:active:focus {
+		outline: none !important;
+	}
+}
+
+.inline-controls {
+	display: inline-block;
+}
+
+*::selection,
+*::-moz-selection {
+	/*Only Firefox still needs a prefix*/
+	color: $white;
+	background: $blue;
+}
+
+// Make all readOnly and disabled fields darker in color
+input[readOnly],
+input[disabled],
+textarea[readOnly],
+textarea[disabled] {
+	background-color: $black-4;
+}

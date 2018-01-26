@@ -1,0 +1,91 @@
+//_LAYOUT--------------------------------------------------------------------*/
+#wrap>.container-fluid {
+	margin-left: 0;
+	padding-top: 25px;
+	padding-right: 0;
+	padding-left: 0;
+	&:before {
+		display: initial;
+	}
+}
+
+.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+code,
+.code {
+	font-size: 80%;
+}
+
+.form-horizontal .control-label {
+	float: left;
+	width: 160px;
+	padding-top: 5px;
+	text-align: right;
+}
+
+//_INTERIOR PAGES------------------------------------------------------------*/
+#nova {
+	// offset of BG image may need to be altered for each browser
+	background: $novaContentBackground;
+}
+
+// Wrapper for page content to push down footer */
+#wrap {
+	height: auto !important;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+#contentHeader {
+	display: none;
+} // hide initially and allow the view to show it when ready
+#content {
+	margin-left: 245px;
+	vertical-align: top;
+}
+
+#contentHolder,
+#contentArea {
+	padding: 10px 10px 30px 10px;
+	&.headerOverride {
+		padding: 0;
+	}
+}
+
+#contentHeader,
+#contentHeaderHolder {
+	min-width: 840px;
+}
+
+.containerLayout {
+	width: 900px;
+	margin-top: 10px;
+	padding: 0 0 10px 0;
+	border: 1px solid $content-area-bdr;
+	background-color: $content-area-bg;
+	>div.contentFormWrapper {
+		padding-top: 25px;
+	}
+	h2 {
+		@extend .headings-h2;
+		margin: -10px 20px 20px 20px;
+		padding: 0 0 10px 0;
+		border-bottom: 1px solid $lightGray;
+	}
+	label.control-label {
+		margin-left: 20px;
+		white-space: nowrap;
+	}
+	.form-horizontal .controls {
+		margin-left: 300px;
+		input[type='text'] {
+			width: 560px;
+		}
+	} // wierd wrapping issue
+	.form-horizontal .form-group:after {
+		clear: right;
+	}
+}

@@ -1,0 +1,39 @@
+{{partial 'header-alert'}}
+<div class='headerButtonBar'>
+{{#if secondaryBtnLabel}}
+	<div class='secondaryButtons'>
+		<button type='button' id='{{secondaryID}}' class='btn btn-default {{secondaryCSS}}' data-automation='header_btn_{{secondaryID}}'>{{secondaryBtnLabel}}</button>
+	</div>
+{{else}}
+    {{#if subItem}}
+	<div class='sectionButtons'>
+	{{#each subItem}}
+		<a href='javacript:void(0);' class='secBtn {{#if isActive}}activeBtn{{else}}inactiveBtn{{/if}}' id='{{id}}' data-datacache='{{../dataCache}}' data-automation='header_btn_{{id}}'>
+			<span class='{{itemData.iconCSS}}'></span>
+			<span class='btnLabel {{itemData.lineWrapCSS}}'>{{itemData.navLabel}}</span></a>
+	{{/each}}
+	</div>
+    {{/if}}
+{{/if}}
+	<div class='prevSaveButtons pull-right'>
+		{{#if prevLabel}}<button type='button' class='btn btn-info saveTemplate previewChangesBtn' data-automation='header_btn_preview'>{{prevLabel}}</button>{{/if}}
+		{{#if saveLabel}}<button type='button' class='btn btn-default btn-primary saveTemplate saveChangesBtn' data-automation='header_btn_save'>{{saveLabel}}</button>{{/if}}
+	</div>
+</div>
+{{#unless noInstanceBar}}
+<div class='headerMenuBar {{menuBarCSS}}{{#unless templateMenus}} noInstances{{/unless}}'>
+	{{#if templateMenus}}
+		{{#each templateMenus}}
+		<div class='headerMenu {{menuType}}-menuContainer'>
+			<label for='{{id}}' class='labelType-{{menuType}}'>{{label}}</label>
+			<select id='{{id}}' class='selectpicker show-tick menuBarSelect {{extraCSS}} menuType-{{menuType}}' data-menutype='{{menuType}}' data-show-subtext='false' data-automation='header_lst_{{menuType}}_{{id}}'>
+				{{#each items}}
+				<option value='{{value}}' {{#if selected}}selected{{/if}}>{{label}}</option>
+				{{/each}}
+			</select>
+			<span class='addLink' data-addtype='{{menuType}}' data-addid='{{id}}'>{{{link}}}</span>
+		</div>
+		{{/each}}
+	{{/if}}
+</div>
+{{/unless}}

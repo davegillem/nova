@@ -1,0 +1,12 @@
+<div id='contentHeader'>
+	{{partial 'header-alert'}}
+	<div class='headerButtonBar'>
+		<div class='sectionButtons'>{{!-- SUB BUTTONS //--}}</div>
+		<div class='prevSaveButtons pull-right'>
+			{{#if saveLabel}}<button type='button' class='btn btn-default btn-primary saveTemplate saveChangesBtn disabledBtn' disabled='disabled' data-automation='header_btn_save'>{{saveLabel}}</button>{{/if}}
+		</div>
+	</div>
+	<div class='headerMenuBar'>{{!-- SUB MENUS //--}}</div>
+</div>
+<div id='contentLoader'>{{partial 'loader'}}</div>
+<div id='contentArea' data-section=''>{{!-- CONTENT //--}}</div>

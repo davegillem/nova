@@ -1,0 +1,169 @@
+/*===================================================================
+//
+// Variables used in the Nova JS Framework Style Sheet
+//
+// $description Common SCSS file for the Nova JS Framework
+//
+// $version 	1.00
+// $author 		Dave Gillem
+================================================================== = */
+
+$font-family-sans-serif: 'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif;
+$font-family-serif: Georgia,
+'Times New Roman',
+Times,
+serif;
+/*****************
+	BASE COLORS
+*****************/
+
+$blue: #4c86a9;
+$blueDark: darken($blue, 10%);
+$blueLight: #cee4ff;
+$blueGray: #2c3338;
+$softBlue: #f7faff;
+$novaDarkBlue: #26384b;
+$gold: #d79b01;
+$green: #788c0e;
+$bright-green: #10a503;
+$darkRed: #700;
+$transparent: rgba(0, 0, 0, 0); // results in transparent, but the alpha = 0 makes smooth diagonals
+$blue-gray: #798693;
+$lighter-blue-gray: lighten($blue-gray, 25%);
+$darker-blue-gray: darken($blue-gray, 25%);
+$green-white: #fafffa;
+// Grays
+$white: #fff;
+$black-1: darken($white, 1%); // #fcfcfc
+$black-2: darken($white, 2%); // #fafafa
+$black-3: darken($white, 3%); // #f7f7f7
+$black-4: darken($white, 4%); // #f5f5f5
+$black-5: darken($white, 5%); // #f2f2f2
+$black-6: darken($white, 6%); // #f0f0f0
+$black-7: darken($white, 7%); // #ededed
+$black-8: darken($white, 8%); // #ebebeb
+$black-9: darken($white, 9%); // #e8e8e8
+$black-10: darken($white, 10%); // #e6e6e6
+$black-15: darken($white, 15%); // #d9d9d9
+$black-20: darken($white, 20%); // #cccccc
+$black-25: darken($white, 25%); // #bfbfbf
+$black-30: darken($white, 30%); // #b3b3b3
+$black-35: darken($white, 35%); // #a6a6a6
+$black-40: darken($white, 40%); // #999999
+$black-45: darken($white, 45%); // #8c8c8c
+$black-50: darken($white, 50%); // #808080
+$black-55: darken($white, 55%); // #737373
+$black-60: darken($white, 60%); // #666666
+$black-65: darken($white, 65%); // #595959
+$black-70: darken($white, 70%); // #4d4d4d
+$black-75: darken($white, 75%); // #404040
+$black-80: darken($white, 80%); // #333333
+$black-85: darken($white, 85%); // #262626
+$black-90: darken($white, 90%); // #191919
+$black-95: darken($white, 95%); // #0d0d0d
+$black: #000;
+$gray-dark: #2a2a2a; // darken($white, 83.5%);
+$darkGray: $black-85;
+$midGray: $black-65;
+$gray: $black-15;
+$lightGray: $black-7;
+$button-corners: 0;
+$brand-primary: $green; //#788C0E;//#859B11;
+$brand-success: #dff0d8;
+$brand-info: $blue; //#6faad0;
+$brand-warning: #f0ad4e;
+$brand-danger: #b94a48;
+$link-color: $brand-info;
+// Typography
+$baseFontSize: 14px;
+$baseFontFamily: $font-family-sans-serif;
+$baseLineHeight: 20px;
+// Forms
+$inputBorderRadius: 0; //$button-corners;
+$inputHeight: ( $baseLineHeight + 10px); // base line-height + 8px vertical padding + 2px top/bottom border
+// Navbar
+$navbarHeight: 40px;
+$navbarBackgroundHighlight: $white;
+$navbarBackground: darken($navbarBackgroundHighlight, 5%);
+$navbarBorder: darken($navbarBackground, 12%);
+$paddingLarge: 11px 19px; // 44px
+$paddingSmall: 2px 10px; // 26px
+$paddingMini: 0 6px; // 22px
+$baseBorderRadius: 0; //4px;
+$borderRadiusLarge: 0; //6px;
+$borderRadiusSmall: 0; //3px;
+$min-site-width: 980px;
+$textField-height: 18px;
+/*****************
+	SIZING
+*****************/
+
+$h1Size: 1.8em;
+$copyright-size: 0.689em;
+$footer-height: 20px;
+$header-height: 52px;
+$logo-area-width: 350px;
+$logo-area-margin: 5px 10px 5px 20px;
+$logo-divider-angle: 140deg;
+$button-corners: 3px;
+$button-border-size: 1px;
+$menu-item-height: 3.5625em;
+$menu-icon-top-margin: 16px;
+/*****************
+	LOADERS
+*****************/
+
+$loader-color: $white;
+$loader-text-color: $white;
+$loader-bg-color: $black-60;
+$progress-bar-base: #378dd3; //make sure its not a full saturation or alternate bars wont display
+$loader-update-size: 7px;
+$loader-update-color: $blueLight; //$white;
+$loader-update-duration: 0.58s;
+$loader-update-style: linear;
+$loader-update-repeat: infinite;
+/*****************
+	COLORS
+*****************/
+
+// Nova Colors
+$novaBackground: darken($black-4, 5%);
+$novaContentBackground: $novaBackground;
+$nova-menuBar-divider: $brand-info;
+$nova-lightBlue: #e1f0fc;
+$subnav-btn-font-color: #727272;
+// main
+$hr-color: $black-20;
+$noData-color: $black-60;
+// header
+$user-text-color: $white;
+$settings-divider-l: #2b618c;
+$settings-divider-r: #4691cc;
+$section-header: #293032;
+$heading-h2-color: $blueDark;
+$admin-title: darken($black-4, 15%);
+$admin-subtitle: darken($black-4, 35%);
+$logout-link: $black-20;
+$logout-link-over: $white;
+// content area
+$content-area-bg: $black-4;
+$content-area-bdr: darken($black-4, 25%);
+$content-area-top-bdr: darken($black-4, 35%);
+// Lists
+$list-ol-side-num: $black-20;
+$list-ol-side-div: $black-20;
+$list-ol-side-p: $black-60;
+$list-ol-side-em: $black-60;
+// menus
+$menu-font-color: $black-30;
+$menu-font-color-sel: $white;
+$menu-btn-color: $blueGray; // #414148;
+$menu-btn-color-sel: $gray-dark;
+$menu-btn-bdr-top: #4e4e55;
+$menu-btn-bdr-bot: #323232;
+$menu-btn-bdr-sel: $black;
+$menu-subnav-bg: #506e84;
+$menu-subnav-font-color: #dbe0e5;

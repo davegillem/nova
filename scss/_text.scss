@@ -1,0 +1,124 @@
+/* fonts */
+
+.base-fonts {
+	font-family: $baseFontFamily;
+	color: $gray-dark;
+}
+
+.fancy-fonts {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+.headings-h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: $heading-h2-color;
+}
+
+.full-btn-font {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1em !important;
+}
+
+.disabled-hidden {
+	pointer-events: none;
+	color: $lightGray;
+}
+
+.headerStyle {
+	font-weight: bold;
+}
+
+.header-user-font {
+	font-size: 0.689em;
+	color: $user-text-color;
+}
+
+.icon-font {
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+}
+
+.list-ol-side-font-em {
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	color: $list-ol-side-em;
+}
+
+.list-ol-side-font-num {
+	@extend .fancy-fonts;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: italic;
+	color: $list-ol-side-num;
+}
+
+.list-ol-side-font-p {
+	@extend .base-fonts;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: normal;
+	color: $list-ol-side-p;
+}
+
+.med-btn-font {
+	font-size: 0.75em;
+	font-weight: bold;
+	line-height: 0.75em !important;
+}
+
+.msg-font-settings {
+	font-size: 0.875em;
+	font-weight: bold;
+}
+
+.nova-subnav-btn-font {
+	@extend .msg-font-settings;
+	line-height: 0.75em !important;
+	text-decoration: none;
+	color: $subnav-btn-font-color;
+	.nav-font {
+		font-size: 0.875em;
+		font-weight: normal;
+	}
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+	.visible {
+		display: block;
+		visibility: visible;
+	}
+	.truncate {
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.lower {
+		text-transform: lowercase;
+	}
+	.firstCap {
+		display: inline-block;
+	}
+	.firstCap::first-letter {
+		text-transform: uppercase;
+	}
+	.firstCapAll {
+		text-transform: capitalize;
+	}
+	h3.sectionHeading {
+		font-size: 1.1em;
+		line-height: 1.1em;
+		margin: 40px 20px 20px 20px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid $black-20;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+}

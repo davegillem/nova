@@ -1,0 +1,27 @@
+{{#if clientLogo}}
+<div id='clientLogo'>
+  	<img src='{{clientLogo}}' align='middle' alt='{{clientAlt}}' />
+</div>
+{{/if}}
+<div id='navMenu'>
+	<ul class='side-menu'>
+		{{#each navItems}}
+		{{#unless hidden}}
+		<li id='leftNav-{{id}}' class='mainLevelNav{{#if isBeta}} isBetaItem{{#if @root.allowBeta}} allowBeta{{/if}}{{/if}}'>
+			<a href='javascript:void(0)' data-id='{{id}}' data-automation='sidebar_btn_{{id}}'><i class='navIcon icon-{{id}} {{iconCSS}}'></i>{{label}}</a>
+			{{#if sections}}
+			<div class='leftSubNav'>
+				<ul>
+    				{{#each sections}}
+    				{{#unless hidden}}
+    				<li{{#if isBeta}} class='isBetaItem{{#if @root.allowBeta}} allowBeta{{/if}}'{{/if}}><a href='javascript:void(0)' data-id='{{id}}' class='subLevelNav fa fa-circle-o{{#if iframe}} iframeContent{{/if}}' data-automation='sidebar_btn_{{id}}'><span>{{label}}</span></a></li>
+    				{{/unless}}
+    				{{/each}}
+				</ul>
+			</div>
+			{{/if}}
+		</li>
+		{{/unless}}
+		{{/each}}
+	</ul>
+</div>

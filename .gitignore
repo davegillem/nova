@@ -1,0 +1,6 @@
+/.eslintrc
+/.jshintrc
+/gulpfile-min.js.map
+/gulpfile.js
+/jsconfig.json
+/package.json

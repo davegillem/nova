@@ -1,0 +1,26 @@
+//============================================================================
+//
+// Nove Scaffolding Style Sheet
+//
+// $description CSS file for the Nove Scaffolding screens using SCSS
+//
+// $version 	1.00
+// $author 		Dave Gillem
+//=============================================================================*/
+@import '_reset'; // in GatewayFramework
+// DEFAULTS
+@import 'scss/_helpers'; // in GatewayFramework
+@import '_variables';
+@import '_svg';
+// LAYOUT
+// ----------
+@import '_globalSetup';
+@import '_layout';
+//COMPONENTS
+//-----------
+@import '_text';
+@import '_loaders';
+//PAGES / SECTIONS
+//------
+@import '_header-footer';
+@import '_sidebar';
