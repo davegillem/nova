@@ -1,15 +1,15 @@
 //============================================================================
 //
-// Nove Scaffolding Style Sheet
+// Nova Scaffolding Style Sheet
 //
 // $description CSS file for the Nove Scaffolding screens using SCSS
 //
 // $version 	1.00
 // $author 		Dave Gillem
 //=============================================================================*/
-@import '_reset'; // in GatewayFramework
+@import '_reset'; // in external framework
 // DEFAULTS
-@import 'scss/_helpers'; // in GatewayFramework
+@import 'scss/_helpers'; // in external framework
 @import '_variables';
 @import '_svg';
 // LAYOUT
