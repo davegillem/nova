@@ -4,11 +4,10 @@ A lightweight JavaScript scaffolding for building SPA with some structure but wi
 
 TODO:
 ——————
-- Need to fix the build process to use webpack or Gulp instead of Codekit
+- Need to fix the build process to use webpack & yarn instead of Gulp, Codekit & Bower
 - Need to cleanup the code formatting done by Prettier
-- Need to create documentation
 - Need to create a demo build
-- Probably have more code that needs to be stripped out, cleaned up
+- Probably have more code that needs to be cleaned up
 
 ## Templates
 [HandlebarsJs](https://handlebarsjs.com/) is what is used for rendering HTML to the screen through the use of templates.
@@ -36,15 +35,15 @@ The `nova.js` file handles the communication between different views and the dat
 	* Views should (at the very least) contain functionality for each primary navigation link. In many cases a View may also be created for sub pages.
 	* Modules are used for functionality in views that may be shared amongst multiple views (ex. data tables)
 * The `nova.data.js` file handles all REST api calls from the front end (this would be the 'M' - Model file in MVC). This file is included in the `nova.js` compilation sequence
-* In addition to the standard MVC files we also have a few other files in each app
+* In addition to the standard MVC files we also have a few other files that are included
 	* The `nova.config.js` file is used to manage hard coded data that may at some point be moved to a RESTful call (ex. textKeys). This file is included in the `nova.js` compilation sequence.
 	* The `nova.logger.js` file is a passive utility file that handles whether `console.log()` statements are output to the browser console. This is controled by added a URL parameter (`debug=true`) to the URL in the browser address bar. This file is included in the `nova.js` compilation sequence
 	* The `nova.utilities.js` file is another utility file that contains common standalone methods that can be used by any view or module and acts as a singleton. Utility methods are called using the following format `NovaUtilities.methodName(arguments);`. For example, to call the `isObject` utility method to validate whether the argument item you pass is a valid object, the call would look like `NovaUtilities.isObject({name:'foo', type:'bar'});`. This file is included in the `nova.js` compilation sequence
-	* The `nova.framework.js` file is used to import and combine dependancies from external sources and helper files. Such as plugins, libraries, 3rd party code, shared resources, etc.. This file is *not* included in the `nova.js` compilation sequence and is loaded/compiled separately to `nova.framework-min.js` and is referenced separately in the HTML page.
-
 ### Views
-Views are basically the code required to render a "page" in the application (the 'V' in MVC). Views can load other views and modules, but should be mostly self contained javaScript code/references to render what is needed on the screen for a single page/screen/view.
+Views are basically the code required to render a "page" in the application (the 'V' in MVC). Views can load other views and modules, but should be mostly self contained javaScript code/references to render what is needed on the screen for a single page/screen/view. These files are included in the `nova.js` compilation sequence.
 ### Modules
-Modules can be thought of as components/ They are similar to views, however rather than being spcific to a single page a module is something that could be shared in multiple views. For example, a DataTables module may be loaded into any view that requires a table to be displays. This helps reduce code repetition for common/shared pieces.
+Modules can be thought of as components/ They are similar to views, however rather than being spcific to a single page a module is something that could be shared in multiple views. For example, a DataTables module may be loaded into any view that requires a table to be displays. This helps reduce code repetition for common/shared pieces. These files are included in the `nova.js` compilation sequence.
 ### Framework
+The `nova.framework.js` file is used to import and combine dependancies from external sources and helper files. Such as plugins, libraries, 3rd party code, shared resources, etc.. This file is *not* included in the `nova.js` compilation sequence and is loaded/compiled separately to `nova.framework-min.js` and is referenced separately in the HTML page.
 ## Build Process
+Currently there is a gulp script that can handle file compilation. The Gulp script also imports a [code-kit scanner utility](https://www.npmjs.com/package/codekit-scanner) to convert codekit append/prepends into import statements prior to compilation.
